@@ -8,7 +8,7 @@ import BinaryRain from './BinaryRain'
 export default function BinaryHero() {
   const [text, setText] = useState('')
   const fullText = 'Mustafa Gül'
-  
+
   useEffect(() => {
     let currentIndex = 0
     const typeText = () => {
@@ -24,12 +24,12 @@ export default function BinaryHero() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/mustafagul',
+      href: 'https://github.com/mstfgul',
       label: 'GitHub'
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/mustafagul',
+      href: 'https://www.linkedin.com/in/mustafa-gul00/',
       label: 'LinkedIn'
     },
     {
@@ -43,7 +43,7 @@ export default function BinaryHero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-binary-bg">
       {/* Binary Rain Background */}
       <BinaryRain />
-      
+
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         {/* Main Title */}

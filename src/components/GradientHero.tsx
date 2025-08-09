@@ -7,7 +7,7 @@ import { Github, Linkedin, Mail, ChevronDown, Sparkles, Code, Database } from 'l
 export default function GradientHero() {
   const [text, setText] = useState('')
   const fullText = 'Mustafa Gül'
-  
+
   useEffect(() => {
     let currentIndex = 0
     const typeText = () => {
@@ -23,13 +23,13 @@ export default function GradientHero() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/mustafagul',
+      href: 'https://github.com/mstfgul',
       label: 'GitHub',
       gradient: 'from-purple-400 to-pink-400'
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/mustafagul',
+      href: 'https://www.linkedin.com/in/mustafa-gul00/',
       label: 'LinkedIn',
       gradient: 'from-blue-400 to-purple-400'
     },
@@ -51,15 +51,15 @@ export default function GradientHero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-bg">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-rainbow-gradient bg-[length:400%_400%] animate-gradient-xy opacity-30"></div>
-      
+
       {/* Floating Shapes */}
       <div className="absolute inset-0 bg-floating-shapes opacity-60"></div>
-      
+
       {/* Animated Orbs */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float-gentle"></div>
       <div className="absolute top-3/4 right-1/4 w-64 h-64 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float-gentle" style={{ animationDelay: '2s' }}></div>
       <div className="absolute bottom-1/4 left-1/2 w-64 h-64 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float-gentle" style={{ animationDelay: '4s' }}></div>
-      
+
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
         {/* Main Title */}
@@ -80,7 +80,7 @@ export default function GradientHero() {
               <span className="text-gradient-text text-sm font-medium">Welcome to my digital space</span>
             </motion.div>
           </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent animate-rainbow-flow bg-[length:200%_auto]">
             {text}
             <motion.span
@@ -155,7 +155,7 @@ export default function GradientHero() {
             <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative z-10">View My Work</span>
           </motion.button>
-          
+
           <motion.button
             className="group relative px-8 py-4 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md text-gradient-text border border-white/20 hover:border-white/40 font-semibold rounded-2xl overflow-hidden transition-all duration-300"
             whileHover={{ scale: 1.05 }}

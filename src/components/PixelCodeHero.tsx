@@ -8,7 +8,7 @@ export default function PixelCodeHero() {
   const [text, setText] = useState('')
   const [currentLine, setCurrentLine] = useState(0)
   const fullName = 'Mustafa Gül'
-  
+
   const codeLines = [
     '> system.boot()',
     '> loading_profile...',
@@ -41,13 +41,13 @@ export default function PixelCodeHero() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/mustafagul',
+      href: 'https://github.com/mstfgul',
       label: 'GitHub',
       color: 'pixel-green'
     },
     {
       icon: Linkedin,
-      href: 'https://linkedin.com/in/mustafagul',
+      href: 'https://www.linkedin.com/in/mustafa-gul00/',
       label: 'LinkedIn',
       color: 'pixel-blue'
     },
@@ -60,23 +60,23 @@ export default function PixelCodeHero() {
   ]
 
   const skills = [
-    { 
-      icon: Code, 
-      title: 'CODING.exe', 
+    {
+      icon: Code,
+      title: 'CODING.exe',
       subtitle: 'Python | SQL | R',
       color: 'text-pixel-green',
       bg: 'bg-pixel-green/10 border-pixel-green'
     },
-    { 
-      icon: Database, 
-      title: 'ML_MODEL.dll', 
+    {
+      icon: Database,
+      title: 'ML_MODEL.dll',
       subtitle: 'Machine Learning',
       color: 'text-pixel-blue',
       bg: 'bg-pixel-blue/10 border-pixel-blue'
     },
-    { 
-      icon: Terminal, 
-      title: 'PIPELINE.sys', 
+    {
+      icon: Terminal,
+      title: 'PIPELINE.sys',
       subtitle: 'Data Engineering',
       color: 'text-pixel-amber',
       bg: 'bg-pixel-amber/10 border-pixel-amber'
@@ -89,12 +89,12 @@ export default function PixelCodeHero() {
       <div className="absolute inset-0 bg-pixel-grid opacity-30"></div>
       <div className="absolute inset-0 bg-scanlines opacity-20"></div>
       <div className="absolute inset-0 bg-crt-screen"></div>
-      
+
       {/* Scanline Animation */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="w-full h-0.5 bg-pixel-green/30 animate-scanline-move"></div>
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 text-center max-w-5xl mx-auto px-4">
         {/* Terminal Header */}
@@ -116,7 +116,7 @@ export default function PixelCodeHero() {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0 }}
-                  animate={{ 
+                  animate={{
                     opacity: index <= currentLine ? 1 : 0.3,
                     color: index === currentLine ? '#00ff00' : '#808080'
                   }}
@@ -210,7 +210,7 @@ export default function PixelCodeHero() {
             <div className="absolute inset-0 bg-pixel-green/20 animate-pixel-pulse"></div>
             <span className="relative z-10">► VIEW PROJECTS</span>
           </motion.button>
-          
+
           <motion.button
             className="group relative bg-pixel-screen border-4 border-pixel-cyan text-pixel-cyan font-mono font-bold px-8 py-4 hover:bg-pixel-cyan hover:text-pixel-bg transition-all duration-300 uppercase tracking-wider"
             whileHover={{ scale: 1.05 }}
