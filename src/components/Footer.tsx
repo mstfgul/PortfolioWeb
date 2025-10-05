@@ -120,9 +120,9 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-xl font-bold mb-6">Let's Connect</h4>
+            <h4 className="text-xl font-bold mb-6">Let&apos;s Connect</h4>
             <p className="text-gray-300 mb-6">
-              Follow me on social media and let's discuss opportunities in data engineering.
+              Follow me on social media and let&apos;s discuss opportunities in data engineering.
             </p>
             
             <div className="flex space-x-4">

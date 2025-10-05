@@ -39,7 +39,7 @@ export default function About() {
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Education</h3>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-gray-800">Master's in Philosophy</h4>
+                <h4 className="font-semibold text-gray-800">Master&apos;s in Philosophy</h4>
                 <p className="text-gray-600">Istanbul MSGSU, Turkey (2020-2022)</p>
               </div>
               <div>

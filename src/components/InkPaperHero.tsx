@@ -555,7 +555,7 @@ export default function InkPaperHero() {
               }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             >
-              "Transforming raw data into actionable insights"
+              &quot;Transforming raw data into actionable insights&quot;
             </motion.p>
             {/* Enhanced Animated sketch arrow */}
             <motion.svg 

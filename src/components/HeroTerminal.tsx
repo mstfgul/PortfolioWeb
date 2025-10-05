@@ -275,12 +275,12 @@ export default function HeroTerminal() {
             }}
             whileHover={{ scale: 1.05 }}
           >
-            <motion.span 
+            <motion.span
               className="text-sm group-hover:text-terminal-blue transition-colors duration-300"
               animate={{ opacity: [0.6, 1, 0.6] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              // scroll_down()
+              {/* scroll_down() */}
             </motion.span>
             <motion.div
               animate={{ y: [0, 8, 0] }}

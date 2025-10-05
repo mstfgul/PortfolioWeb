@@ -233,7 +233,7 @@ export default function Projects() {
               href="#contact"
               className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors"
             >
-              Let's Connect
+              Let&apos;s Connect
             </a>
           </div>
         </motion.div>

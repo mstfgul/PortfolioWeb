@@ -36,7 +36,7 @@ export default function PixelCodeHero() {
       setCurrentLine(prev => (prev + 1) % codeLines.length)
     }, 2000)
     return () => clearInterval(interval)
-  }, [])
+  }, [codeLines.length])
 
   const socialLinks = [
     {

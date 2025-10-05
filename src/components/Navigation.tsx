@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Menu, X, Home, User, Code, Briefcase, FolderOpen, Mail } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 
@@ -9,14 +9,14 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { id: 'home', label: 'Home', icon: Home, href: '#' },
     { id: 'about', label: 'About', icon: User, href: '#about' },
     { id: 'skills', label: 'Skills', icon: Code, href: '#skills' },
     { id: 'experience', label: 'Experience', icon: Briefcase, href: '#experience' },
     { id: 'projects', label: 'Projects', icon: FolderOpen, href: '#projects' },
     { id: 'contact', label: 'Contact', icon: Mail, href: '#contact' },
-  ]
+  ], [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +37,7 @@ export default function Navigation() {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [navItems])
 
   const handleNavClick = (href: string, id: string) => {
     setActiveSection(id)
