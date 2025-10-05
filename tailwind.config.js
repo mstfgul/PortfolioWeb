@@ -9,52 +9,63 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // 8-bit Retro Arcade + Code Theme
-        pixel: {
-          bg: '#0f0f0f',        // Almost black like old CRT
-          screen: '#1a1a1a',    // Dark screen
-          green: '#00ff00',     // Classic terminal green
-          amber: '#ffaa00',     // Amber monitor color
-          red: '#ff0040',       // Bright red
-          blue: '#0080ff',      // Electric blue
-          purple: '#8000ff',    // Neon purple
-          cyan: '#00ffff',      // Bright cyan
-          yellow: '#ffff00',    // Bright yellow
-          white: '#ffffff',     // Pure white
-          gray: '#808080',      // Mid gray
-          darkgray: '#404040',  // Dark gray
+        // Modern Corporate Theme
+        primary: {
+          50: '#eff6ff',   // Very light blue
+          100: '#dbeafe',  // Light blue
+          200: '#bfdbfe',  // Lighter blue
+          300: '#93c5fd',  // Light accent blue
+          400: '#60a5fa',  // Medium blue
+          500: '#3b82f6',  // Primary blue
+          600: '#2563eb',  // Strong blue
+          700: '#1d4ed8',  // Dark blue
+          800: '#1e40af',  // Darker blue
+          900: '#1e3a8a',  // Navy blue
         },
-        // Code editor inspired colors
-        code: {
-          bg: '#1e1e1e',        // VS Code dark
-          sidebar: '#252526',   // Sidebar color
-          line: '#2d2d2d',      // Line highlight
-          comment: '#6a9955',   // Comment green
-          keyword: '#569cd6',   // Keyword blue
-          string: '#ce9178',    // String orange
-          function: '#dcdcaa',  // Function yellow
-          variable: '#9cdcfe',  // Variable cyan
-          error: '#f44747',     // Error red
+        secondary: {
+          50: '#f8fafc',   // Very light gray
+          100: '#f1f5f9',  // Light gray
+          200: '#e2e8f0',  // Lighter gray
+          300: '#cbd5e1',  // Light accent gray
+          400: '#94a3b8',  // Medium gray
+          500: '#64748b',  // Primary gray
+          600: '#475569',  // Strong gray
+          700: '#334155',  // Dark gray
+          800: '#1e293b',  // Darker gray
+          900: '#0f172a',  // Almost black
         },
-        // Retro arcade colors
-        arcade: {
-          coin: '#ffd700',      // Gold coin
-          powerup: '#ff69b4',   // Hot pink
-          energy: '#00ff7f',    // Spring green
-          warning: '#ff4500',   // Orange red
-          bonus: '#ff1493',     // Deep pink
-        }
+        accent: {
+          blue: '#3b82f6',
+          cyan: '#06b6d4',
+          teal: '#14b8a6',
+          green: '#10b981',
+          orange: '#f97316',
+        },
+        // Keep backward compatibility
+        ink: {
+          black: '#0f172a',
+          gray: '#475569',
+          sketch: '#1e293b',
+          border: '#e2e8f0',
+        },
+        paper: {
+          50: '#ffffff',
+          100: '#f8fafc',
+          200: '#f1f5f9',
+          300: '#e2e8f0',
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        // 8-bit Retro Backgrounds
-        'pixel-grid': 'linear-gradient(rgba(0,255,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,0,0.1) 1px, transparent 1px)',
-        'scanlines': 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,255,0,0.03) 2px, rgba(0,255,0,0.03) 4px)',
-        'crt-screen': 'radial-gradient(ellipse at center, rgba(0,255,0,0.1) 0%, transparent 70%)',
-        'code-editor': 'linear-gradient(135deg, #1e1e1e 0%, #252526 100%)',
-        'terminal-glow': 'radial-gradient(ellipse at center, rgba(0,255,0,0.2) 0%, rgba(0,0,0,0.8) 70%)',
-        'pixel-noise': 'repeating-conic-gradient(from 0deg at 50% 50%, rgba(0,255,0,0.02) 0deg, transparent 1deg, rgba(0,255,0,0.02) 2deg, transparent 3deg)',
+        // Ink & Paper Backgrounds
+        'paper-texture': 'radial-gradient(circle at 20% 20%, rgba(0,0,0,0.02) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(0,0,0,0.02) 0%, transparent 50%)',
+        'sketch-lines': 'repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px)',
+        'crosshatch': 'repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(-45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px)',
+        'paper-grain': 'repeating-conic-gradient(from 0deg at 50% 50%, rgba(0,0,0,0.01) 0deg, transparent 2deg, rgba(0,0,0,0.01) 4deg, transparent 6deg)',
+        'ink-blot': 'radial-gradient(circle at 30% 70%, rgba(0,0,0,0.1) 0%, transparent 30%), radial-gradient(circle at 70% 30%, rgba(0,0,0,0.08) 0%, transparent 25%)',
+        'notebook-lines': 'repeating-linear-gradient(0deg, transparent, transparent 23px, rgba(0,0,0,0.1) 23px, rgba(0,0,0,0.1) 24px)',
+        'hand-drawn-border': 'linear-gradient(0deg, rgba(0,0,0,0.1) 0%, transparent 2px), linear-gradient(90deg, rgba(0,0,0,0.1) 0%, transparent 2px), linear-gradient(180deg, rgba(0,0,0,0.1) 0%, transparent 2px), linear-gradient(270deg, rgba(0,0,0,0.1) 0%, transparent 2px)',
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-in-out',
@@ -71,15 +82,15 @@ module.exports = {
         'glitch': 'glitch 2s infinite',
         'scan-line': 'scanLine 2s linear infinite',
         'terminal-boot': 'terminalBoot 3s ease-out',
-        // 8-bit Pixel Animations
-        'pixel-pulse': 'pixel-pulse 2s ease-in-out infinite',
-        'scanline-move': 'scanline-move 3s linear infinite',
-        'crt-flicker': 'crt-flicker 0.1s linear infinite',
-        'pixel-glow': 'pixel-glow 1.5s ease-in-out infinite alternate',
-        'code-typing': 'code-typing 4s steps(20) infinite',
-        'terminal-blink': 'terminal-blink 1s step-end infinite',
-        'pixel-bounce': 'pixel-bounce 0.6s ease-in-out infinite alternate',
-        'retro-slide': 'retro-slide 0.3s ease-out',
+        // Ink & Paper Animations
+        'sketch-draw': 'sketch-draw 2s ease-in-out',
+        'paper-fold': 'paper-fold 1s ease-in-out',
+        'ink-flow': 'ink-flow 3s ease-in-out infinite',
+        'hand-write': 'hand-write 4s steps(40)',
+        'pencil-sketch': 'pencil-sketch 1.5s ease-out',
+        'page-turn': 'page-turn 0.8s cubic-bezier(0.4, 0, 0.2, 1)',
+        'draw-line': 'draw-line 1s ease-in-out',
+        'fade-sketch': 'fade-sketch 2s ease-in-out infinite alternate',
       },
       keyframes: {
         fadeIn: {
@@ -138,52 +149,88 @@ module.exports = {
           '50%': { opacity: '1' },
           '100%': { width: '100%', opacity: '1' },
         },
-        // 8-bit Pixel Keyframes
-        'pixel-pulse': {
-          '0%, 100%': { 
-            transform: 'scale(1)', 
-            boxShadow: '0 0 0 rgba(0, 255, 0, 0.5)' 
+        // Ink & Paper Keyframes
+        'sketch-draw': {
+          '0%': { 
+            strokeDasharray: '0 1000',
+            opacity: '0' 
           },
           '50%': { 
-            transform: 'scale(1.05)', 
-            boxShadow: '0 0 20px rgba(0, 255, 0, 0.8)' 
-          }
-        },
-        'scanline-move': {
-          '0%': { transform: 'translateY(-100vh)' },
-          '100%': { transform: 'translateY(100vh)' }
-        },
-        'crt-flicker': {
-          '0%, 98%': { opacity: '1' },
-          '99%': { opacity: '0.96' },
-          '100%': { opacity: '1' }
-        },
-        'pixel-glow': {
-          '0%': { 
-            textShadow: '0 0 5px currentColor',
-            filter: 'brightness(1)' 
+            strokeDasharray: '500 500',
+            opacity: '0.8' 
           },
           '100%': { 
-            textShadow: '0 0 20px currentColor, 0 0 30px currentColor',
-            filter: 'brightness(1.2)' 
+            strokeDasharray: '1000 0',
+            opacity: '1' 
           }
         },
-        'code-typing': {
-          '0%': { width: '0' },
-          '50%': { width: '100%' },
-          '100%': { width: '0' }
+        'paper-fold': {
+          '0%': { 
+            transform: 'perspective(1000px) rotateX(-90deg)',
+            transformOrigin: 'bottom',
+            opacity: '0' 
+          },
+          '100%': { 
+            transform: 'perspective(1000px) rotateX(0deg)',
+            transformOrigin: 'bottom',
+            opacity: '1' 
+          }
         },
-        'terminal-blink': {
-          '0%, 50%': { opacity: '1' },
-          '51%, 100%': { opacity: '0' }
+        'ink-flow': {
+          '0%, 100%': { 
+            transform: 'scale(1)',
+            opacity: '0.8' 
+          },
+          '50%': { 
+            transform: 'scale(1.02)',
+            opacity: '1' 
+          }
         },
-        'pixel-bounce': {
-          '0%': { transform: 'translateY(0px)' },
-          '100%': { transform: 'translateY(-8px)' }
+        'hand-write': {
+          '0%': { width: '0', opacity: '0' },
+          '10%': { opacity: '1' },
+          '90%': { opacity: '1' },
+          '100%': { width: '100%', opacity: '0.9' }
         },
-        'retro-slide': {
-          '0%': { transform: 'translateX(-20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' }
+        'pencil-sketch': {
+          '0%': { 
+            filter: 'blur(2px)',
+            opacity: '0',
+            transform: 'translateY(20px)' 
+          },
+          '50%': { 
+            filter: 'blur(1px)',
+            opacity: '0.7' 
+          },
+          '100%': { 
+            filter: 'blur(0)',
+            opacity: '1',
+            transform: 'translateY(0)' 
+          }
+        },
+        'page-turn': {
+          '0%': { 
+            transform: 'perspective(1000px) rotateY(-20deg)',
+            opacity: '0' 
+          },
+          '100%': { 
+            transform: 'perspective(1000px) rotateY(0deg)',
+            opacity: '1' 
+          }
+        },
+        'draw-line': {
+          '0%': { 
+            width: '0',
+            opacity: '0' 
+          },
+          '100%': { 
+            width: '100%',
+            opacity: '1' 
+          }
+        },
+        'fade-sketch': {
+          '0%': { opacity: '0.6' },
+          '100%': { opacity: '0.9' }
         },
       },
       backdropBlur: {

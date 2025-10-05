@@ -91,8 +91,8 @@ export default function Contact() {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            I'm currently seeking opportunities as a Junior Data Engineer. 
-            Let's discuss how we can work together to build innovative data solutions.
+            Currently seeking Data Analyst, Data Engineer, Junior Data Scientist, or ML Engineer roles in Belgium.
+            Available for full-time positions, freelance projects, and technical collaborations.
           </p>
         </motion.div>
 
@@ -271,8 +271,8 @@ export default function Contact() {
               Ready to Start a Conversation?
             </h3>
             <p className="text-gray-600 mb-6">
-              Whether you have a project in mind, want to discuss opportunities, 
-              or just want to connect, I'd love to hear from you.
+              Open to discussing data engineering projects, analytics opportunities, ML collaborations,
+              or any technical challenges involving data. Location: Marche-en-Famenne, Belgium (EU work authorization).
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

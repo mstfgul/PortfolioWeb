@@ -60,7 +60,7 @@ export default function Navigation() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="fixed top-0 left-0 right-0 z-50 bg-pixel-screen border-b-2 border-pixel-green font-mono"
+        className="fixed top-0 left-0 right-0 z-50 bg-paper-50/95 backdrop-blur-sm border-b border-ink-border"
       >
         <div className="container-max section-padding">
           <div className="flex items-center justify-between h-16">
@@ -70,10 +70,14 @@ export default function Navigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-10 h-10 bg-pixel-green border-2 border-pixel-green flex items-center justify-center">
-                <span className="text-pixel-bg font-bold text-lg font-mono">MG</span>
+              <div className="w-10 h-10 bg-ink-black border border-ink-sketch flex items-center justify-center relative">
+                <span className="text-paper-50 font-medium text-lg">MG</span>
+                {/* Hand-drawn border effect */}
+                <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 40 40">
+                  <path d="M2,2 L38,2 L38,38 L2,38 Z" stroke="currentColor" strokeWidth="1" fill="none" className="text-ink-sketch"/>
+                </svg>
               </div>
-              <span className="font-bold text-xl text-pixel-green font-mono tracking-wider">MUSTAFA.GUL</span>
+              <span className="font-medium text-xl text-ink-black tracking-wide">Mustafa Gül</span>
             </motion.div>
 
             {/* Desktop Menu */}
@@ -84,10 +88,10 @@ export default function Navigation() {
                   <motion.button
                     key={item.id}
                     onClick={() => handleNavClick(item.href, item.id)}
-                    className={`flex items-center space-x-2 px-4 py-2 border-2 transition-all duration-300 font-mono uppercase text-sm ${
+                    className={`flex items-center space-x-2 px-4 py-2 transition-all duration-300 text-sm relative ${
                       activeSection === item.id
-                        ? 'text-pixel-bg bg-pixel-green border-pixel-green'
-                        : 'text-pixel-green border-pixel-screen hover:text-pixel-bg hover:bg-pixel-green hover:border-pixel-green'
+                        ? 'text-paper-50 bg-ink-black'
+                        : 'text-ink-black hover:text-paper-50 hover:bg-ink-sketch'
                     }`}
                     whileHover={{ y: -1 }}
                     whileTap={{ scale: 0.95 }}
@@ -107,7 +111,7 @@ export default function Navigation() {
             <div className="md:hidden">
               <motion.button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 border-2 border-pixel-green text-pixel-green hover:text-pixel-bg hover:bg-pixel-green transition-all duration-300"
+                className="p-2 border border-ink-border text-ink-black hover:text-paper-50 hover:bg-ink-sketch transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -130,16 +134,16 @@ export default function Navigation() {
           initial={false}
           animate={{ x: isOpen ? 0 : '100%' }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="absolute right-0 top-0 h-full w-80 bg-pixel-screen border-l-4 border-pixel-green shadow-2xl font-mono"
+          className="absolute right-0 top-0 h-full w-80 bg-paper-50/98 backdrop-blur-sm border-l border-ink-border shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="p-6">
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-pixel-blue border-2 border-pixel-blue flex items-center justify-center">
-                  <span className="text-pixel-bg font-bold font-mono">MG</span>
+                <div className="w-8 h-8 bg-ink-sketch border border-ink-border flex items-center justify-center">
+                  <span className="text-paper-50 font-medium">MG</span>
                 </div>
-                <span className="font-bold text-lg text-pixel-blue font-mono tracking-wider">MENU.EXE</span>
+                <span className="font-medium text-lg text-ink-black tracking-wide">Menu</span>
               </div>
               
               <div className="flex items-center space-x-2">
@@ -148,7 +152,7 @@ export default function Navigation() {
                 </div>
                 <motion.button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 border-2 border-pixel-red text-pixel-red hover:text-pixel-bg hover:bg-pixel-red transition-all duration-300"
+                  className="p-2 border border-ink-border text-ink-black hover:text-paper-50 hover:bg-ink-sketch transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -164,10 +168,10 @@ export default function Navigation() {
                   <motion.button
                     key={item.id}
                     onClick={() => handleNavClick(item.href, item.id)}
-                    className={`w-full flex items-center space-x-3 px-4 py-3 border-2 transition-all duration-300 font-mono uppercase text-sm ${
+                    className={`w-full flex items-center space-x-3 px-4 py-3 transition-all duration-300 text-sm relative ${
                       activeSection === item.id
-                        ? 'text-pixel-bg bg-pixel-cyan border-pixel-cyan'
-                        : 'text-pixel-cyan border-pixel-screen hover:text-pixel-bg hover:bg-pixel-cyan hover:border-pixel-cyan'
+                        ? 'text-paper-50 bg-ink-black'
+                        : 'text-ink-black hover:text-paper-50 hover:bg-ink-sketch'
                     }`}
                     whileHover={{ x: 4 }}
                     whileTap={{ scale: 0.95 }}
@@ -179,16 +183,20 @@ export default function Navigation() {
               })}
             </nav>
 
-            <div className="mt-8 pt-8 border-t-2 border-pixel-green">
+            <div className="mt-8 pt-8 border-t border-ink-border">
               <div className="text-center">
-                <p className="text-sm text-pixel-green mb-4 font-mono">&gt; CONTACT.exe</p>
+                <p className="text-sm text-ink-gray mb-4 tracking-wide">Get in touch</p>
                 <motion.a
                   href="mailto:mstfgul00@gmail.com"
-                  className="bg-pixel-amber text-pixel-bg px-6 py-3 font-mono font-bold border-2 border-pixel-amber hover:bg-pixel-bg hover:text-pixel-amber transition-all duration-300 inline-block uppercase tracking-wider"
+                  className="bg-ink-black text-paper-50 px-6 py-3 font-medium border border-ink-black hover:bg-paper-50 hover:text-ink-black transition-all duration-300 inline-block tracking-wide relative"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  ► SEND_MAIL
+                  <span className="relative z-10">Contact Me</span>
+                  {/* Sketch border on hover */}
+                  <svg className="absolute inset-0 w-full h-full opacity-0 hover:opacity-30 transition-opacity duration-300" viewBox="0 0 120 40">
+                    <path d="M2,2 L118,2 L118,38 L2,38 Z" stroke="currentColor" strokeWidth="1" fill="none" className="text-ink-sketch"/>
+                  </svg>
                 </motion.a>
               </div>
             </div>

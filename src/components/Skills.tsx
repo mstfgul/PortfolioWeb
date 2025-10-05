@@ -6,15 +6,14 @@ import { Code, Database, Cloud, Brain, Settings, TrendingUp } from 'lucide-react
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Programming & Data",
+      title: "Programming & Analysis",
       icon: Code,
       color: "blue",
       skills: [
-        { name: "Python", level: 90 },
-        { name: "SQL", level: 85 },
-        { name: "Pandas", level: 88 },
-        { name: "NumPy", level: 85 },
-        { name: "Scikit-learn", level: 80 }
+        { name: "Python (Pandas, NumPy)", level: 90 },
+        { name: "SQL (PostgreSQL, MySQL)", level: 90 },
+        { name: "R (Statistical Analysis)", level: 75 },
+        { name: "JavaScript", level: 70 }
       ]
     },
     {
@@ -22,59 +21,57 @@ export default function Skills() {
       icon: Database,
       color: "green",
       skills: [
-        { name: "PySpark", level: 75 },
-        { name: "Airflow", level: 70 },
-        { name: "Docker", level: 65 },
-        { name: "ETL Pipelines", level: 80 },
-        { name: "Data Warehousing", level: 75 }
+        { name: "Apache Spark & PySpark", level: 80 },
+        { name: "Airflow", level: 75 },
+        { name: "n8n Automation", level: 80 },
+        { name: "Docker", level: 75 },
+        { name: "ETL Pipeline Design", level: 85 }
       ]
     },
     {
-      title: "Cloud & Tools",
+      title: "Cloud & Databases",
       icon: Cloud,
       color: "purple",
       skills: [
-        { name: "Azure", level: 60 },
-        { name: "AWS", level: 55 },
-        { name: "Snowflake", level: 70 },
-        { name: "DBT", level: 65 },
-        { name: "Kubernetes", level: 50 }
+        { name: "AWS (S3, RDS, Lambda)", level: 70 },
+        { name: "Google Cloud (BigQuery)", level: 65 },
+        { name: "PostgreSQL & MySQL", level: 85 },
+        { name: "MongoDB & Redis", level: 70 }
       ]
     },
     {
-      title: "Data Science",
+      title: "Machine Learning & AI",
       icon: Brain,
       color: "orange",
       skills: [
-        { name: "Machine Learning", level: 80 },
-        { name: "Data Visualization", level: 85 },
-        { name: "Seaborn", level: 85 },
-        { name: "Exploratory Data Analysis", level: 90 },
-        { name: "Statistical Analysis", level: 75 }
+        { name: "Scikit-Learn & TensorFlow", level: 80 },
+        { name: "LangChain & OpenAI API", level: 75 },
+        { name: "Feature Engineering", level: 85 },
+        { name: "Model Deployment", level: 75 }
       ]
     },
     {
-      title: "Advanced Tools",
-      icon: Settings,
+      title: "Data Analysis & Viz",
+      icon: TrendingUp,
       color: "red",
       skills: [
-        { name: "LangChain", level: 55 },
-        { name: "GeoPandas", level: 70 },
-        { name: "Web Scraping", level: 80 },
-        { name: "OCR", level: 65 },
-        { name: "LLM Integration", level: 60 }
+        { name: "Exploratory Data Analysis", level: 90 },
+        { name: "Statistical Testing", level: 80 },
+        { name: "Matplotlib & Seaborn", level: 85 },
+        { name: "Streamlit & Plotly", level: 80 },
+        { name: "Power BI", level: 65 }
       ]
     },
     {
-      title: "Competencies",
-      icon: TrendingUp,
+      title: "Tools & Technologies",
+      icon: Settings,
       color: "indigo",
       skills: [
-        { name: "Data Pipeline Development", level: 85 },
-        { name: "Automation & Orchestration", level: 80 },
-        { name: "Database Management", level: 85 },
-        { name: "Data Cleaning", level: 90 },
-        { name: "Project Management", level: 75 }
+        { name: "Git & CI/CD", level: 80 },
+        { name: "GeoPandas", level: 75 },
+        { name: "Web Scraping", level: 85 },
+        { name: "OCR & LLM Integration", level: 75 },
+        { name: "FastAPI & Flask", level: 80 }
       ]
     }
   ]
@@ -105,8 +102,8 @@ export default function Skills() {
             Technical Skills
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            My technical expertise spans across data engineering, data science, and cloud technologies,
-            with hands-on experience in building scalable data solutions.
+            Comprehensive technical expertise spanning the entire data lifecycle, from pipeline development
+            to ML deployment, with active learning through Coursera and DataCamp.
           </p>
         </motion.div>
 

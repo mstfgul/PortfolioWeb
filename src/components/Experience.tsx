@@ -13,13 +13,14 @@ export default function Experience() {
       type: "Internship",
       icon: Building,
       color: "blue",
-      description: "Currently working on advanced data engineering solutions for geological data processing and AI integration.",
+      description: "Working on advanced data engineering solutions for geological data processing and AI integration.",
       achievements: [
-        "ETL Pipeline Development: Design, optimization, extraction, transformation, and loading of geological data",
-        "LLM Integration: Translation of unstructured geological text into structured formats",
-        "OCR & LLM for Raster Data: Data extraction from images/maps in geological PDFs",
-        "Feature Integration: Continuous workflow optimization and feature implementation",
-        "Geospatial & Vector Data Structuring: Structuring spatial/vector data for AI/ML analysis"
+        "Designed and optimized ETL pipelines for geological data processing with Python and PySpark",
+        "Performed exploratory data analysis on 50K+ geological records, identifying key patterns and anomalies",
+        "Integrated LLMs to convert unstructured geological text into structured formats, improving data accessibility by 85%",
+        "Implemented OCR + LLM solutions for extracting data from geological PDFs and maps",
+        "Structured geospatial and vector data for AI/ML analysis using Geopandas",
+        "Created dashboards and visualizations for data quality monitoring"
       ]
     },
     {
@@ -30,13 +31,13 @@ export default function Experience() {
       type: "Training",
       icon: Award,
       color: "green",
-      description: "Intensive data engineering bootcamp focusing on practical skills and hands-on projects.",
+      description: "Completed intensive 7-month bootcamp covering data engineering, analytics, and machine learning.",
       achievements: [
-        "Mastered data pipelines, ETL processes, and cloud platforms through active learning",
-        "Built end-to-end data solutions using modern tools and technologies",
-        "Developed expertise in Python, SQL, and data engineering frameworks",
-        "Collaborated on real-world projects fostering practical skills and continuous growth",
-        "Gained proficiency in cloud services (Azure, AWS) and containerization (Docker)"
+        "Built 8+ end-to-end projects: data pipelines, ML models, dashboards, and automated workflows",
+        "Hands-on experience with large-scale datasets (1M+ records) and modern data stack technologies",
+        "Conducted exploratory data analysis, feature engineering, and model evaluation",
+        "Developed expertise in Python, SQL, PySpark, Airflow, and cloud platforms",
+        "Mastered data pipeline development, ETL processes, and workflow automation"
       ]
     },
     {
@@ -99,8 +100,8 @@ export default function Experience() {
             Professional Experience
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            My journey from philosophy to data engineering, enriched by diverse experiences 
-            in education, volunteering, and hands-on technical training.
+            Hands-on experience across the full data lifecycle, from ETL pipeline development to ML model deployment,
+            with proven impact in production environments and real-world data challenges.
           </p>
         </motion.div>
 

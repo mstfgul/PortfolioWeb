@@ -18,9 +18,10 @@ export default function About() {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I began with a Bachelor's and Master's in Philosophy, then pivoted into data engineering at BeCode, 
-            where I'm building data pipelines and managing processes with advanced tools and languages. 
-            My diverse background brings a creative edge to technical challenges.
+            Recent Junior Data Engineer Intern at MinersAI with hands-on experience across the full data lifecycle:
+            ETL pipelines, exploratory analysis, ML model development, and workflow automation. My philosophy
+            background brings exceptional problem-solving skills and critical thinking to data challenges.
+            Currently expanding expertise through continuous learning while building production-ready solutions.
           </p>
         </motion.div>
 

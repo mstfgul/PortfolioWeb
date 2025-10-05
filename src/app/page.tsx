@@ -1,5 +1,5 @@
 import Navigation from '@/components/Navigation'
-import PixelCodeHero from '@/components/PixelCodeHero'
+import ModernCorporateHero from '@/components/ModernCorporateHero'
 import About from '@/components/About'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <PixelCodeHero />
+      <ModernCorporateHero />
       <About />
       <Skills />
       <Experience />
